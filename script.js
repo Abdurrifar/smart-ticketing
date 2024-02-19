@@ -104,9 +104,19 @@ function A1() {
     const sless = seatAdd('less-seat')
     const updateSocree = sless - 1;
     getElementbyValue('less-seat', updateSocree)
-    function totalSum() {
+     totalSum('total-price') 
         
-    }
+    
+}
+
+function totalSum(elementId) {
+    const nam = document.getElementById(elementId)
+   
+ 
+   nam.innerText= priceSet('price-Set')
+    
+ 
+    
 }
 function A4() {
     setBgcolor('seat-add')
