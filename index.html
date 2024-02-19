@@ -11,7 +11,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="max-w-7xl m-28 mt-5 raleway-font bg-[#F7F8F8]  ">
-    <header>
+    <header id="hidden-section">
 
         <nav>
             <div class="navbar bg-base-100">
@@ -55,7 +55,7 @@
          <h1 class="font-bold text-6xl text-[#FFFFFF]">End-to-End Travel with <br> <span class="text-[#1DD100]">
              P Paribahan</span></h1>
              <p class="text-sm text-white py-6">Popular for fast class traveling .It`s traveld Dhaka to Chottogram.All poribahan are  AC services.You are most <br> welcome to visit our famous travel bus site .Thnaks you.</p>
-             <button class=" text-xl font-bold btn bg-[#1DD100]">Buy Tickets</button>
+             <button onclick="buyButton()" class=" text-xl font-bold btn bg-[#1DD100]">Buy Tickets</button>
         </div>
  
      </div>
@@ -63,9 +63,9 @@
 </header>
     
     
-    <main>
+    <main id="main-section" >
         <!-- best offer section------------------ -->
-        <section class="flex flex-col gap-16 justify-center items-center">
+        <section id="hidden-section2" class="flex flex-col gap-16 justify-center items-center">
             <h3 class="text-4xl text-[#030712] font-bold">Best offers for you</h3>
           <article class="flex gap-8">
             <article class="  flex justify-center items-center bg-[#FFBF0F] rounded-md px-16 py-4">
@@ -96,7 +96,7 @@
 
         <!-- per seat price--------------------***************************** -->
 
-        <section class="flex flex-col gap-20 mt-20 justify-center text-center ">
+        <section  class="flex flex-col gap-20 mt-20 justify-center text-center ">
             <div>
                 <h2 class="text-4xl text-[#030712] font-bold">P.H Paribahan</h2>
                 <p class=" text-gray-600 text-sm">We discus our bus ticket price in different destinatin your journey.We also have a cupon discout  <br>which is different others.Most welcome</p>
@@ -111,7 +111,7 @@
                         <p class="text-gray-600 text-sm  ">Coach-009-WEB  AC_Business</p>
                        </div>
                       </div>
-                       <div class="flex  items-center bg-gray-100 h-12 text-center rounded-xl p-2"><img class="w-8 h-8" src="images/seat-green.png" alt=""> <p class="text-[#1DD100] text-xl font-bold">8 Seats left</p></div>
+                       <div class="flex  items-center bg-gray-100 h-12 text-center rounded-xl p-2"><img class="w-8 h-8" src="images/seat-green.png" alt=""> <p class="text-[#1DD100] text-xl font-bold"> <span id="less-seat" >8</span> Seats left</p></div>
                     </div>
                </div>
               
@@ -143,7 +143,7 @@
         </section>
         <!-- seat booking section*****************//-------------- -->
 
-       <aside class="bg-[#FFFFFF] rounded-lg flex justify-between gap-2 p-10 mt-2 mx-20">
+       <aside id="hidden1" class="bg-[#FFFFFF] rounded-lg flex justify-between gap-2 p-10 mt-2 mx-20">
         
         
         <article>
@@ -164,20 +164,20 @@
 
             <div class="flex mt-16 gap-8 justify-between items-center">
                 <div class="text-sm text-gray-600">A</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A1</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A2</div>
-                <div class="bg-[#0307121A] ml-4  p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A3</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A4</div>
+                <div onclick="A1()" id="a1" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A1</div>
+                <div onclick="A2()" id="a2" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A2</div>
+                <div onclick="A3()" id="a3" class="bg-[#0307121A]   ml-4  p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A3</div>
+                <div onclick="A4()" id="a4" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">A4</div>
                 
             </div>
-            <div class="flex mt-6 gap-8 justify-between items-center">
+            <!-- <div class="flex mt-6 gap-8 justify-between items-center">
                 <div class="text-sm text-gray-600">B</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B1</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B2</div>
-                <div class="bg-[#0307121A] ml-4  p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B3</div>
-                <div class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B4</div>
+                <div onclick="B1()" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B1</div>
+                <div onclick="B2()" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B2</div>
+                <div onclick="B3()" class="bg-[#0307121A] ml-4  p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B3</div>
+                <div onclick="B4()" class="bg-[#0307121A]   p-2  w-14 h-10 text-center  rounded-lg text-sm text-gray-600">B4</div>
                 
-            </div>
+            </div> -->
             
         </article>
         <!-- customers input -->
@@ -185,42 +185,61 @@
             <h3  class="text-xl font-bold ">Select Your Seat r</h3>
             <div class="bg-[#bdc2cf1a] w-80 rounded-xl  p-4 m-8">
                 <div class="flex justify-between text-black font-bold">
-                <p>Seat: <span>2</span></p>
+                <p>Seat: <span id="seat-add">0</span></p>
                 <p>Class</p>
                 <p>Price</p>
             </div>
             <hr>
+
+
+
                 <div class="flex justify-between text-gray-400 py-2">
-                    <p>C2</p>
+                    <p id="set-Name">name</p>
                     <p>Economoy</p>
-                    <span>550</span>
+                    <span id="price-Set">0</span>
                 </div>
                 <div class="flex justify-between text-gray-400 py-2">
-                    <p>C2</p>
-                    <p>Economoy</p>
-                    <span>550</span>
-                </div>
+                  <p id="set2-Name">name</p>
+                  <p>Economoy</p>
+                  <span id="price2-Set">0</span>
+              </div>
+                <div class="flex justify-between text-gray-400 py-2">
+                  <p id="set3-Name">name</p>
+                  <p>Economoy</p>
+                  <span id="price3-Set">0</span>
+              </div>
+                <div class="flex justify-between text-gray-400 py-2">
+                  <p id="set4-Name">name</p>
+                  <p>Economoy</p>
+                  <span id="price4-Set">0</span>
+              </div>
+
+
+
+
+
+
                 <hr>
                 <div class="flex justify-between py-2  text-black font-bold">
                     <p>Total Price</p>
-                    <span>BDT1100</span>
+                   <p>BDT <span id="ticket-price">0</span></p>
                 </div>
                 <div class="flex justify-between items-center py-2">
                    <div>
-                     <input type="text" class="p-2 rounded " placeholder="Have any copupon"></div>
-                    <button class="btn bg-[#1DD100] text-[#ffffff] text-sm font-bold">Apply</button>
+                     <input id="cupon-field" type="text" class="p-2 rounded " placeholder="Have any copupon"></div>
+                    <button id="apply-button" class="btn bg-[#1DD100] text-[#ffffff] text-sm font-bold" disabled>Apply</button>
                 </div>
                 <div class="flex justify-between py-2  text-black font-bold">
                     <p>Grand Total</p>
-                   <p>BDT <span>1100</span></p>
+                   <p>BDT <span>0</span></p>
                 </div>
                  <p class="py-2  text-black font-bold"><label for="">Passenger Name*</label></p>
                  <input class="w-full p-2 rounded-lg" type="text" placeholder="Your Name">
                  <p class="py-2  text-black font-bold"><label for="">Passenger Number*</label></p>
-                 <input class="w-full p-2 rounded-lg" type="text" placeholder="Your number">
+                 <input class="w-full p-2 rounded-lg" type="number" placeholder="Your number">
                  <p class="py-2  text-black font-bold"><label for="">Email:</label></p>
-                 <input class="w-full p-2 rounded-lg" type="text" placeholder="mail">
-               <button class=" btn w-full bg-[#1dd100] p-2 text-white font-bold rounded-md">Next</button>
+                 <input class="w-full p-2 rounded-lg" type="email" placeholder="mail">
+               <button onclick="nextButton()" class=" btn w-full bg-[#1dd100] p-2 text-white font-bold rounded-md">Next</button>
                <div class="flex justify-between gap-2 text-sm text-gray-400 ">
                 <p  class="divide-gray-950">Terms and Conditions</p> <hr>
                 <p >Cancellation Policy</p>
@@ -230,16 +249,17 @@
        </aside>
 
        <!-- success section------------------------ -->
-       <section class="flex justify-center hidden">
-        <div class="text-center flex flex-col items-center p-4 bg-[#ffffff] m-10 rounded-md ">
-           <div> <img src="images/success.png" alt=""></div>
-            <p class="text-[#1dd100] text-xl font-bold">success</p>
-            <p class="font-bold text-sm">successFully paid your Booking in our Desh  <br> Travel paribahan .Thank you very mush  .Allah bless you .best of luck.</p>
-            <span class="text-gray-400 text-sm ">We sand a confimetion in your mail or number</span>
-        </div>
-       </section>
+   
         </main>
-    <footer>
+        <section id="success" class="flex justify-center items-center hidden h-screen">
+          <div class="text-center flex flex-col items-center p-4 bg-[#ffffff] m-10 rounded-md ">
+             <div> <img src="images/success.png" alt=""></div>
+              <p class="text-[#1dd100] text-xl font-bold">success</p>
+              <p class="font-bold text-sm">successFully paid your Booking in our Desh  <br> Travel paribahan .Thank you very mush  .Allah bless you .best of luck.</p>
+              <span class="text-gray-400 text-sm ">We sand a confimetion in your mail or number</span>
+          </div>
+         </section>
+    <footer id="footer-Section">
       <div class="flex justify-between p-6  mx-4 gap-auto bg-gray-900 h-52 text-white">
         <div>
             <p class=" font-bold text-xl">P-ticket</p>
@@ -267,6 +287,7 @@
       
         
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
