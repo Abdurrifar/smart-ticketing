@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap')
+
+.raleway-font {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    
+}
+
+body{
+    height: 2600px;
+}
+.banner{
+    background-image: url(images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 99%;
+    height: 690px;
+    
+}
+p{font-size: 14px;}
