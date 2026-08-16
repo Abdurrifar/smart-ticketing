@@ -1,12 +1,10 @@
-function setBgcolor(elementId) {
-    const eId = document.getElementById(elementId)
-    eId.classList.add('bg-orange-400')
-}
+
 // buy button
 function buyButton() {
     const hiddenSection = document.getElementById('hidden-section')
     hiddenSection.classList.add('hidden')
-    const hiddenSection2=document.getElementById('hidden-section2')
+
+    const hiddenSection2 = document.getElementById('hidden-section2')
     hiddenSection2.classList.add('hidden')
 }
 
@@ -15,23 +13,20 @@ function nextButton() {
     const selement = document.getElementById('success')
     selement.classList.remove('hidden')
 
-
     const mainh = document.getElementById('main-section')
     mainh.classList.add('hidden')
     const headerh = document.getElementById('hidden-section')
     headerh.classList.add('hidden')
     const hFaderh = document.getElementById('footer-Section')
     hFaderh.classList.add('hidden')
-
-
-
 }
 
 document.getElementById('cupon-field').addEventListener('keyup', function (event) {
-    const text=event.target.value;
-    console.log(text)
-    const disbutton=document.getElementById('apply-button')
-    if(text==='NEW15' || text ==='Couple 20'){
+    const text = event.target.value;
+    // console.log(text)
+    const disbutton = document.getElementById('apply-button')
+
+    if (text === 'NEW15' || text === 'Couple 20') {
         disbutton.removeAttribute('disabled')
         if (text === 'NEW15') {
             const ticketprice = document.getElementById('ticket-price')
@@ -42,49 +37,20 @@ document.getElementById('cupon-field').addEventListener('keyup', function (event
             const price = ticketprice * 20 / 100;
         }
     }
-    else{
+    else {
         disbutton.setAttribute('disabled', true)
     }
 })
 
-function A3() {
-    setBgcolor('seat-add')
-    setBgcolor('less-seat')
-    setBgcolor('a3')
 
 
-    const oneSet3 = priceSet('price3-Set')
-    
-    const setname= setName3('set3-Name')
+// select set =============================================================
 
-    // score up/down------------------
-    const currentScore = seatAdd('seat-add')
-    const eSocre = currentScore + 1;
-    getElementbyValue('seat-add', eSocre)
-
-    const sless = seatAdd('less-seat')
-    const updateSocree = sless - 1;
-    getElementbyValue('less-seat',updateSocree )
+function setBgcolor(elementId) {
+    const eId = document.getElementById(elementId)
+    eId.classList.add('bg-orange-400')
 }
-function A2() {
-    setBgcolor('seat-add')
-    setBgcolor('less-seat')
-    setBgcolor('a2')
 
-
-    const oneSet2 = priceSet('price2-Set')
-    
-    const setname= setName2('set2-Name')
-
-    // score up/down------------------
-    const currentScore = seatAdd('seat-add')
-    const eSocre = currentScore + 1;
-    getElementbyValue('seat-add', eSocre)
-
-    const sless = seatAdd('less-seat')
-    const updateSocree = sless - 1;
-    getElementbyValue('less-seat',updateSocree )
-}
 
 function A1() {
     setBgcolor('seat-add')
@@ -93,8 +59,8 @@ function A1() {
 
 
     const oneSet1 = priceSet('price-Set')
-    
-    const setname= setName('set-Name')
+
+    const setname = setName('set-Name')
 
     // score up/down------------------
     const currentScore = seatAdd('seat-add')
@@ -104,29 +70,21 @@ function A1() {
     const sless = seatAdd('less-seat')
     const updateSocree = sless - 1;
     getElementbyValue('less-seat', updateSocree)
-     totalSum('total-price') 
-        
-    
+    totalSum('total-price')
+
+
 }
 
-function totalSum(elementId) {
-    const nam = document.getElementById(elementId)
-   
- 
-   nam.innerText= priceSet('price-Set')
-    
- 
-    
-}
-function A4() {
+
+function A2() {
     setBgcolor('seat-add')
     setBgcolor('less-seat')
-    setBgcolor('a4')
+    setBgcolor('a2')
 
 
-    const oneSet4 = priceSet('price4-Set')
-    
-    const setname= setName('set4-Name')
+    const oneSet2 = priceSet('price2-Set')
+
+    const setname = setName2('set2-Name')
 
     // score up/down------------------
     const currentScore = seatAdd('seat-add')
@@ -135,15 +93,66 @@ function A4() {
 
     const sless = seatAdd('less-seat')
     const updateSocree = sless - 1;
-    getElementbyValue('less-seat',updateSocree )
+    getElementbyValue('less-seat', updateSocree)
 }
 
+
+function A3() {
+    setBgcolor('seat-add')
+    setBgcolor('less-seat')
+    setBgcolor('a3')
+
+
+    const oneSet3 = priceSet('price3-Set')
+
+    const setname = setName3('set3-Name')
+
+    // score up/down------------------
+    const currentScore = seatAdd('seat-add')
+    const eSocre = currentScore + 1;
+    getElementbyValue('seat-add', eSocre)
+
+    const sless = seatAdd('less-seat')
+    const updateSocree = sless - 1;
+    getElementbyValue('less-seat', updateSocree)
+}
+
+
+function A4() {
+    setBgcolor('seat-add')
+    setBgcolor('less-seat')
+    setBgcolor('a4')
+
+
+    const oneSet4 = priceSet('price4-Set')
+
+    const setname = setName('set4-Name')
+
+    // score up/down------------------
+    const currentScore = seatAdd('seat-add')
+    const eSocre = currentScore + 1;
+    getElementbyValue('seat-add', eSocre)
+
+    const sless = seatAdd('less-seat')
+    const updateSocree = sless - 1;
+    getElementbyValue('less-seat', updateSocree)
+}
+
+
+
+function totalSum(elementId) {
+    const nam = document.getElementById(elementId)
+
+
+    nam.innerText = priceSet('price-Set')
+
+}
 
 // utilitis-------------------------------------
 function priceSet(elementId) {
     const a = document.getElementById(elementId)
     a.innerText = 550
-    
+
 }
 
 function setName(elementId) {
@@ -167,7 +176,7 @@ function setName4(elementId) {
 function seatAdd(elementId) {
     const sa = document.getElementById(elementId)
     const sai = sa.innerText;
-    const value = parseInt(sai)  
+    const value = parseInt(sai)
     return value
 }
 
